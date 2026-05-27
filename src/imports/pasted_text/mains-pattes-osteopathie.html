@@ -1,0 +1,191 @@
+Build a complete, production-ready single HTML file for "Mains & Pattes", an animal osteopathy practice. The site must be entirely in French, modern, warm, and organic in feel — reflecting the natural, hands-on care philosophy of the practice.
+
+---
+
+## Brand identity
+
+Name: Mains & Pattes
+Tagline: "L'ostéopathie animale, avec cœur et expertise"
+Tone: warm, professional, reassuring, nature-connected
+
+Design tokens:
+  --primary: #846451        /* brun cuir — boutons CTA, icônes, accents */
+  --primary-hover: #6E5244  /* brun foncé — états hover */
+  --surface: #D7CBBD        /* sable doux — fonds de sections alternées */
+  --bg: #F7F7F7             /* blanc cassé — background principal */
+  --text: #212422           /* noir profond — nav, footer, corps */
+  --text-strong: #000000    /* noir pur — H1 / H2 */
+  --muted: #9A8D82          /* texte secondaire / disclaimers */
+
+Typography: 'Inter', sans-serif
+  h1: 3.5rem / weight 500 / color var(--text-strong)
+  h2: 2.2rem / weight 500 / color var(--text-strong)
+  h3: 1.2rem / weight 500 / color var(--text)
+  body: 1rem / weight 400 / line-height 1.8 / color var(--text)
+
+Border radius: 16px cards, 999px pills/badges, 8px buttons
+Spacing unit: 8px base
+
+---
+
+## Layout: single scrollable page, 11 sections
+
+---
+
+### 1. Navigation (sticky, top)
+- Left: logo lockup — paw SVG icon (simple, drawn with CSS/SVG path) + "Mains & Pattes" in weight 500
+- Center: links — À propos | Animaux | Consultation | Tarifs | Contact
+- Right: CTA button "Prendre rendez-vous" (background #846451, text #F7F7F7, radius 8px)
+- Background: #212422, text links: #D7CBBD, hover: #F7F7F7
+- Mobile: hamburger menu, full-screen overlay in #212422
+
+---
+
+### 2. Hero section
+- Full viewport height (100vh)
+- Background: #F7F7F7, with a large soft organic blob shape in #D7CBBD (CSS clip-path or SVG) positioned bottom-right
+- Left column (60%):
+  - Eyebrow text: "Ostéopathie animale · Déplacement à domicile" in #846451, font-size 14px, uppercase, letter-spacing 0.1em
+  - H1: "Le bien-être de vos animaux, entre de bonnes mains"
+  - Subtext (16px, color #9A8D82): "Une approche manuelle, globale et bienveillante — pour chiens, chats, chevaux, bovins et NAC"
+  - CTA row: primary button "Prendre rendez-vous" (#846451 bg) + ghost button "Découvrir l'ostéopathie" (border #846451, text #846451)
+- Right column (40%): large rounded image placeholder div (border-radius 24px, background #D7CBBD, height 480px) with centered paw+hands SVG illustration
+- Scroll indicator: animated chevron at bottom center
+
+---
+
+### 3. À propos — Qui suis-je ?
+- Background: #212422
+- Two-column: image placeholder left (rounded, #D7CBBD bg) + text right
+- All text: #F7F7F7 and #D7CBBD
+- H2: "Une approche globale, au service de votre animal"
+- 3–4 lines of placeholder bio text
+- Two certification badge pills (background #846451, text #F7F7F7): "Certifié(e) en ostéopathie animale" + "Formation reconnue"
+- Subtle horizontal rule in #846451 before the section
+
+---
+
+### 4. Pour quels animaux ?
+- Background: #F7F7F7
+- H2 centered: "Des soins adaptés à chaque espèce"
+- 4 cards in a grid row, each card:
+  - Background: #D7CBBD, border-radius 16px, padding 2rem
+  - Top: large SVG icon (simple line-art animal silhouette) in #846451
+  - Animal name (h3): #212422
+  - 1-line description: #9A8D82
+  - Hover: background shifts to #846451, all text to #F7F7F7, smooth transition 0.25s
+- Animals: Chiens & Chats | Chevaux & Équidés | Bovins & Ferme | NAC
+
+---
+
+### 5. Motifs de consultation
+- Background: #D7CBBD
+- H2 centered: "Quand consulter ?"
+- 8 cards in a 4×2 grid:
+  1. Troubles locomoteurs — boiterie, raideurs, perte d'amplitude
+  2. Bilan annuel & prévention — anticipez avant les troubles
+  3. Croissance du jeune animal — grandir harmonieusement
+  4. Suite accident ou chirurgie — favoriser la récupération
+  5. Troubles digestifs & viscéraux — inconforts récurrents
+  6. Stress & comportement — quand le corps exprime un mal-être
+  7. Animaux sportifs & reproducteurs — optimiser et prévenir
+  8. Pathologies chroniques — arthrose, dysplasie, en complément vétérinaire
+- Each card: background #F7F7F7, border-radius 12px, SVG icon top (#846451), title in #212422, description in #9A8D82
+- Below grid: disclaimer banner (background #212422, text #D7CBBD, border-left 4px solid #846451):
+  "L'ostéopathie animale est une pratique complémentaire et ne remplace pas un diagnostic vétérinaire. En cas de pathologie aiguë, un avis vétérinaire est indispensable."
+
+---
+
+### 6. Déroulement d'une consultation
+- Background: #F7F7F7
+- H2 centered: "Comment se déroule une séance ?"
+- Horizontal timeline (4 steps) on desktop / vertical on mobile
+- Each step:
+  - Number badge: circle, background #846451, text #F7F7F7, size 40px
+  - Connector line between steps: 2px dashed #D7CBBD
+  - Icon below badge (SVG, simple)
+  - Step title (h3): #212422
+  - 2-line description: #9A8D82
+- Steps:
+  1. Échange avec le propriétaire — historique, environnement, habitudes
+  2. Observation & bilan — posture, mobilité, comportement
+  3. Manipulations manuelles — techniques douces et adaptées
+  4. Conseils post-séance — repos, exercices, suivi recommandé
+
+---
+
+### 7. Zone d'intervention & Tournées
+- Background: #212422
+- Two columns:
+  - Left: H2 "Zone d'intervention" (#F7F7F7), paragraph (#D7CBBD) explaining home visits + km fees, list of covered areas as pills (#846451 bg, #F7F7F7 text)
+  - Right: "Prochaines tournées" card list (background #D7CBBD bg, border-radius 16px) with 2–3 placeholder date+location rows
+- CTA button: "Réserver une séance lors d'une tournée" (#846451)
+
+---
+
+### 8. Témoignages
+- Background: #D7CBBD
+- H2 centered: "Ils nous font confiance" (#212422)
+- Horizontal auto-scroll carousel, 3 testimonial cards:
+  - Background: #F7F7F7, border-radius 16px, padding 1.5rem
+  - Large opening quote mark in #846451
+  - Quote text in #212422
+  - Footer: animal type pill (#D7CBBD bg, #846451 text) + client first name (#9A8D82)
+- CSS-only or minimal JS scroll
+
+---
+
+### 9. Tarifs
+- Background: #F7F7F7
+- H2 centered: "Tarifs" + subtitle "Déplacement à domicile inclus dans la zone principale"
+- 3 pricing cards side by side:
+  Card 1 — Chiens & Chats: 60–80 €, 45–60 min
+  Card 2 — Chevaux & Équidés: 80–100 €, 60–75 min (featured card — border 2px solid #846451)
+  Card 3 — Bovins / NAC: Sur devis, durée variable
+- Each card: background #D7CBBD, border-radius 16px, animal icon top, price large (#846451, 2rem), duration muted
+- Disclaimer below: "Tarifs indicatifs — nous contacter pour un devis personnalisé. Frais kilométriques : 0,35 €/km au-delà de la zone principale."
+
+---
+
+### 10. Contact & Prise de RDV
+- Background: #212422
+- H2: "Contactez Mains & Pattes" (#F7F7F7)
+- Two columns:
+  - Left: contact info block (background #D7CBBD, border-radius 16px, padding 1.5rem):
+    - Phone icon + "06 XX XX XX XX"
+    - Email icon + "contact@mainsetpattes.fr"
+    - Instagram icon + "@mainsetpattes"
+    - All icons in #846451, text in #212422
+  - Right: large CTA card (background #846451, border-radius 16px, padding 2rem):
+    - H3: "Réservez votre séance" (#F7F7F7)
+    - Short text (#D7CBBD): "Prenez rendez-vous en ligne ou contactez-nous directement."
+    - Button: "Prendre rendez-vous" (background #F7F7F7, text #846451, radius 8px)
+- Below: simple contact form (background #D7CBBD panel, border-radius 16px):
+  Fields: Votre prénom | Type d'animal | Motif de consultation | Votre message | Submit button (#846451)
+
+---
+
+### 11. Footer
+- Background: #212422
+- Logo lockup (paw SVG + "Mains & Pattes") in #F7F7F7
+- Condensed nav links in #D7CBBD
+- Legal line in #9A8D82 (font-size 12px): "L'ostéopathie animale est une pratique complémentaire. Mains & Pattes n'est pas un service vétérinaire."
+- Copyright: "© 2025 Mains & Pattes — Tous droits réservés"
+- Instagram icon link in #846451
+
+---
+
+## Technical requirements
+- Single HTML file, no external dependencies except Google Fonts (Inter)
+- Tailwind CDN or plain CSS custom properties — your choice
+- Mobile-first, fully responsive
+- Smooth scroll: scroll-behavior: smooth
+- CSS transitions on all hover states (0.25s ease)
+- Semantic HTML: nav, main, section, footer, aria-labels
+- All image zones: styled div placeholders with background-color, no broken img tags
+- All text in French
+- No JavaScript frameworks — vanilla JS only if needed (carousel, hamburger menu)
+
+---
+
+Build the complete site now.
