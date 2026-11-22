@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import logoImage from "../../imports/IMG_4990-removebg-preview.png";
+import logoImage from "../../imports/logo-cheval.png";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

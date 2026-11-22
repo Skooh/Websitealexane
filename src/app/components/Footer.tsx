@@ -1,4 +1,4 @@
-import logoImage from "../../imports/IMG_4990-removebg-preview.png";
+import logoImage from "../../imports/logo-cheval.png";
 
 export function Footer() {
   return (
